@@ -1,0 +1,417 @@
+{
+  "id": "7d2f01d2-5be5-4d74-b57d-3abe44040b17",
+  "version": "2.0",
+  "name": "Isi title di teman",
+  "url": "https://teman.sirogu.com",
+  "tests": [{
+    "id": "128a7b34-2a3d-48f2-aa64-2b4327617abf",
+    "name": "MASTER TEMPLATE UPLOAD TEST CASE",
+    "commands": [{
+      "id": "27b63600-f362-4ad3-a97e-5294d3aa07be",
+      "comment": "",
+      "command": "open",
+      "target": "/products/14/11238/create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f76e58c-ff60-4940-96e6-108fe1c88019",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.css-14i0fwl", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "${Title}"
+    }, {
+      "id": "652d7902-89ab-45e2-a28c-fdb3c994f9ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=#field-27 .chakra-button",
+      "targets": [
+        ["css=#field-27 .chakra-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[16]", "xpath:attributes"],
+        ["xpath=//div[@id='field-27']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fcafb01-4b14-4816-bedb-fb167f7eefd8",
+      "comment": "",
+      "command": "click",
+      "target": "//li[@role=\"option\"]//*[text()=\"Indonesia\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c770f3cf-0bed-407a-a710-5aaa7da2874a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#field-28 .chakra-button",
+      "targets": [
+        ["css=#field-28 .chakra-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//div[@id='field-28']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6daf5c3b-df3a-429b-9edc-52c2585f131d",
+      "comment": "",
+      "command": "click",
+      "target": "//li[@role=\"option\"]//*[text()=\"Web\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3287972-cd75-4c00-9666-9e8706caa6f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#field-32 .chakra-button",
+      "targets": [
+        ["css=#field-32 .chakra-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[18]", "xpath:attributes"],
+        ["xpath=//div[@id='field-32']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20439a6e-b7af-45f0-874f-ab111b0ad473",
+      "comment": "",
+      "command": "//type",
+      "target": "//div[@role=\"list\"]//*[text()=\"CRM\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c8e7962-46e1-4d53-abf0-9e66cf4c99d3",
+      "comment": "",
+      "command": "click",
+      "target": "//li[@role=\"option\"]//*[text()=\"CRM\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08be2755-4932-4bc6-9437-19e9fa7e320e",
+      "comment": "",
+      "command": "select",
+      "target": "name=priorityId",
+      "targets": [
+        ["id=field-33", "id"],
+        ["name=priorityId", "name"],
+        ["css=#field-33", "css:finder"],
+        ["xpath=//select[@id='field-33']", "xpath:attributes"],
+        ["xpath=//div[7]/div/div[2]/div/select", "xpath:position"]
+      ],
+      "value": "label=Critical Path"
+    }, {
+      "id": "97d2f928-8f20-49e2-9526-84886aeae77f",
+      "comment": "",
+      "command": "type",
+      "target": "name=prdLink",
+      "targets": [
+        ["id=field-31", "id"],
+        ["name=prdLink", "name"],
+        ["css=#field-31", "css:finder"],
+        ["xpath=//input[@id='field-31']", "xpath:attributes"],
+        ["xpath=//div[5]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "https://ruanggguru.atlassian.net/wiki/spaces/CRM/pages/2942173394/PRD+School+Pack+Expansion"
+    }, {
+      "id": "35aa6d0f-6d90-4608-8fb0-fcd5e9fb2da7",
+      "comment": "",
+      "command": "type",
+      "target": "name=references",
+      "targets": [
+        ["name=references", "name"],
+        ["css=.css-1jhv7l0", "css:finder"],
+        ["xpath=//input[@name='references']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "https://ruanggguru.atlassian.net/browse/CP-3585"
+    }, {
+      "id": "65e198a6-7014-4df0-82f3-0463d4568846",
+      "comment": "",
+      "command": "type",
+      "target": "name=designLink",
+      "targets": [
+        ["id=field-34", "id"],
+        ["name=designLink", "name"],
+        ["css=#field-34", "css:finder"],
+        ["xpath=//input[@id='field-34']", "xpath:attributes"],
+        ["xpath=//div[8]/div/div[2]/input", "xpath:position"]
+      ],
+      "value": "https://www.figma.com/file/wreo7A4y0593FOsyWxG5I4/School-Pack-Expansion?node-id=599-19150&t=jFur4X3ZGPF5AFPB-0"
+    }, {
+      "id": "4b99b0f2-9e0f-48ba-bd97-3448c2048eaf",
+      "comment": "",
+      "command": "click",
+      "target": "name=precondition",
+      "targets": [
+        ["id=field-37", "id"],
+        ["name=precondition", "name"],
+        ["css=#field-37", "css:finder"],
+        ["xpath=//textarea[@id='field-37']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a493448b-e907-4b6c-befb-e72b7e2b7268",
+      "comment": "",
+      "command": "type",
+      "target": "name=precondition",
+      "targets": [
+        ["id=field-37", "id"],
+        ["name=precondition", "name"],
+        ["css=#field-37", "css:finder"],
+        ["xpath=//textarea[@id='field-37']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "-"
+    }, {
+      "id": "7cdb375a-4cf2-431c-a65a-fd5e85cbad06",
+      "comment": "",
+      "command": "select",
+      "target": "name=featureFlag",
+      "targets": [],
+      "value": "label=Not Applicable"
+    }, {
+      "id": "a2f91ee0-0353-4d9d-b371-d6fe57509b4a",
+      "comment": "",
+      "command": "//click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "42838cd9-ccf1-4e93-9f4a-5a37d348099e",
+    "name": "coba ngisi step",
+    "commands": [{
+      "id": "c391fbff-fa91-44a2-bb4a-551f0a727a64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-tpdm63",
+      "targets": [
+        ["css=.css-tpdm63", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "900c139f-162d-4f17-ab46-807e63a387f6",
+      "comment": "",
+      "command": "type",
+      "target": "name=step[content]",
+      "targets": [
+        ["name=step[content]", "name"],
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=//textarea[@name='step[content]']", "xpath:attributes"],
+        ["xpath=//div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "step 1"
+    }, {
+      "id": "07153b65-39fb-430c-ae57-cfd637cebdca",
+      "comment": "",
+      "command": "type",
+      "target": "name=step[expected]",
+      "targets": [
+        ["name=step[expected]", "name"],
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=//textarea[@name='step[expected]']", "xpath:attributes"],
+        ["xpath=//div[2]/textarea", "xpath:position"]
+      ],
+      "value": "expected 1"
+    }, {
+      "id": "9a5634a5-b160-4340-9368-2ce52b0e9b8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-tpdm63",
+      "targets": [
+        ["css=.css-tpdm63", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ecf22af-ecfb-4d3c-872c-4690d9f899e4",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[content]'])[2]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[content]'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "step 2"
+    }, {
+      "id": "574764db-2121-481b-afed-04192c50cdf6",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[expected]'])[2]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[expected]'])[2]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "expected 2"
+    }, {
+      "id": "7e8a0851-7fc5-4953-893a-65987ed89c40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-tpdm63",
+      "targets": [
+        ["css=.css-tpdm63", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f8b4044-bc12-48c6-b16b-3eb0c6500993",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[content]'])[3]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[content]'])[3]", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "step 3"
+    }, {
+      "id": "3837444d-9ed6-4f59-a21d-bd6c019511dd",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[expected]'])[3]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[expected]'])[3]", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "expected 3"
+    }, {
+      "id": "2228a315-a3c9-4650-8cbd-4d432bccc3a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-tpdm63",
+      "targets": [
+        ["css=.css-tpdm63", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0ea463c-f3fb-4066-86f0-f3ce7964368f",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[content]'])[4]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[content]'])[4]", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "step 4"
+    }, {
+      "id": "85e9c585-74d2-4603-a150-e25e31b11be5",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[expected]'])[4]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[expected]'])[4]", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "expected 4"
+    }, {
+      "id": "76f330a7-67e8-4e2b-9b8d-0070fc127381",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-tpdm63",
+      "targets": [
+        ["css=.css-tpdm63", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[3]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Step')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfd42fe2-d0ca-4864-b841-065fc006bd38",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[content]'])[5]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[content]'])[4]", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/div/textarea", "xpath:position"]
+      ],
+      "value": "step 5"
+    }, {
+      "id": "914933c1-b264-47d1-b34f-e6a6fed6a683",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=(//textarea[@name='step[expected]'])[5]",
+      "targets": [
+        ["css=.focus-visible", "css:finder"],
+        ["xpath=(//textarea[@name='step[expected]'])[4]", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/div[2]/textarea", "xpath:position"]
+      ],
+      "value": "expected 5"
+    }, {
+      "id": "babfae69-f245-43f1-b607-04caaa317f98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "641b207a-92d4-4c77-b852-e7871113d655",
+    "name": "store title 1",
+    "commands": [{
+      "id": "e6077acc-0f50-4f9c-adf6-cc7f2ea8c310",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [\"User should be able to see 'Number of Rombel' column data.\",\"User should be able to see the 'Rombel Penetration' data\",\"User should be able to see the 'Rombel Penetration' number\",\"User should be able to see th 'Rombel Penetration' percentage\",\"Verify the formula to count the 'Rombel Penetration' rate percentage is correct\",\"Verify that the Number of Rombel data is based on the current AY\",\"User should be able to see 'Number of Leads' column data\",\"User should be able to see the 'Leads Penetration' number.\",\"User should be able to see the 'Leads Penetration' percentage.\",\"Verify the formula to count the 'Leads Penetration' penetration rate percentage is correct.\",\"Verify that the Number of Leads data is based on the current AY\",\"User should be able to see 'Number of FEC' column data\",\"User should be able to see 'Rombel/EC' column data\",\"Verify that the number of 'Total Rombel' data is based on BM/CMC added session to their FEC \",\"Verify that the number of 'Total FEC' data is based on BM/CMC assign session to their FEC\",\"Verify that the formula to calculate the total of the 'Rombel/EC' data is correct\",\"Verify that the 'Rombel/EC' data is accumulated in one activity from all session how many class and number of FEC assigned\",\"User should be able to see the 'Leads/EC' column data\",\"Verify that the 'Total Leads' data is based on leads data inputted to CRM by RG Form, bulk upload by agent\",\"Verify that the 'Total FEC' data is based on BM/CMC assign session to their FEC\",\"Verify that the formula to calculate the total of the 'Leads/EC' data is correct\",\"Verify that the 'Leads/EC' data is accumulated in one activity from all session how many leads received \",\"User should be able to see 'Deal Type' column data\",\"User should be able to see 'Budget & Revenue Plan' column data\",\"User should be able to see the 'Budget Needed' data \",\"User should be able to see 'Revenue Plan' data \",\"User should be able to see 'Total Revenue' column data\",\"User should be able to see 'School Category' column data\"]",
+      "targets": [],
+      "value": "testCaseTitle"
+    }, {
+      "id": "e94a19ed-f25d-4ec9-8067-cac6edd48833",
+      "comment": "",
+      "command": "forEach",
+      "target": "testCaseTitle",
+      "targets": [],
+      "value": "Title"
+    }, {
+      "id": "efcdb58a-fb0c-474e-9029-2bd5dca4ecfa",
+      "comment": "",
+      "command": "run",
+      "target": "MASTER TEMPLATE UPLOAD TEST CASE",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4835e332-b5db-4fe8-a466-b38fad935bfb",
+      "comment": "",
+      "command": "run",
+      "target": "coba ngisi step",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc777dd8-50c5-40b5-b539-c0bb7d7a7c83",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "cb0ca3b8-8280-4dde-8728-d933a4162e52",
+    "name": "combination",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["641b207a-92d4-4c77-b852-e7871113d655"]
+  }],
+  "urls": ["https://teman.sirogu.com/"],
+  "plugins": []
+}
