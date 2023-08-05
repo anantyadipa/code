@@ -15,7 +15,7 @@ from selenium.webdriver.common.keys import Keys
 #end
 
 
-wb = load_workbook(filename='/Users/ruangguru/Documents/test QA automation test case.xlsx')
+wb = load_workbook(filename='/Users/ruangguru/Documents/automation.xlsx')
 sheetRange = wb['Full Field input test case']
 
 options = uc.ChromeOptions()
