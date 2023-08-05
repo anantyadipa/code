@@ -14,7 +14,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 #end
 
-wb = load_workbook(filename='/Users/ruangguru/Documents/python-automation-test/src/test QA automation test case.xlsx')
+wb = load_workbook(filename='/Users/ruangguru/Documents/python-automation-test/src/automation.xlsx')
 sheetRange = wb['Bulk Edit']
 
 # non headless
@@ -31,7 +31,7 @@ options.add_experimental_option("detach", True)
 # options.add_experimental_option("detach", True)
 
 # data store
-id = 93
+id = 14
 empty_cell_found = False
 message = ' - telah ter edit.'
 #looping
@@ -42,19 +42,20 @@ while i <= len(sheetRange['A']):
     # Title	Country	Platform	Stream	References	PRD	Design Link	Automation	Priority	Feature Flag	Precondition
 
     TC_ID = sheetRange['A'+str(i)].value
-    prereq = sheetRange['B'+str(i)].value
-    precond = sheetRange['C'+str(i)].value
-    action1 = sheetRange['D'+str(i)].value
-    expected1 = sheetRange['E'+str(i)].value
-    action2 = sheetRange['F'+str(i)].value
-    expected2 = sheetRange['G'+str(i)].value
-    action3 = sheetRange['H'+str(i)].value
-    expected3 = sheetRange['I'+str(i)].value
-    action4 = sheetRange['J'+str(i)].value
-    expected4 = sheetRange['K'+str(i)].value
-    action5 = sheetRange['L'+str(i)].value
-    expected5 = sheetRange['M'+str(i)].value
-    testData = sheetRange['N'+str(i)].value
+    TC_Title = sheetRange['B'+str(i)].value
+    prereq = sheetRange['C'+str(i)].value
+    precond = sheetRange['D'+str(i)].value
+    action1 = sheetRange['E'+str(i)].value
+    expected1 = sheetRange['F'+str(i)].value
+    action2 = sheetRange['G'+str(i)].value
+    expected2 = sheetRange['H'+str(i)].value
+    action3 = sheetRange['I'+str(i)].value
+    expected3 = sheetRange['J'+str(i)].value
+    action4 = sheetRange['K'+str(i)].value
+    expected4 = sheetRange['L'+str(i)].value
+    action5 = sheetRange['M'+str(i)].value
+    expected5 = sheetRange['N'+str(i)].value
+    testData = sheetRange['O'+str(i)].value
     
     driver.implicitly_wait(0.3)
     
@@ -79,24 +80,28 @@ while i <= len(sheetRange['A']):
             empty_cell_found = True  # Sel kosong ditemukan di 'Title'
             break
                 
-        prereqs = prereq.split('\n\n')
+        prereqs = prereq.split('\n')
         testDatas = testData.split('\n\n')
+
+        if TC_Title:
+            driver.find_element(By.NAME, "title").clear()
+            driver.find_element(By.NAME, "title").send_keys(TC_Title)    
        
         if prereq:
             # driver.find_element(By.XPATH, '//div[1]/div[3]/div/div[2]/div/form/div[2]/div[1]/div[2]/div/div/div/div[2]/button[1]').click()
             driver.find_element(By.XPATH, '//div[1]/div[3]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]').click()
-            time.sleep(0.3)
             for _ in range(10):
                 driver.find_element(By.XPATH, '//div[1]/div[3]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]').send_keys(Keys.BACKSPACE)
-           
+            driver.implicitly_wait(0.3)
+                       
 
             for prline in prereqs:
+                driver.implicitly_wait(0.3)
                 driver.find_element(By.XPATH, '//div[1]/div[3]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]').click()
                 driver.find_element(By.XPATH, '//div[1]/div[3]/div/div[2]/div/form/div[2]/div[1]/div[2]/div/div/div/div/input').send_keys(prline)
                 driver.find_element(By.XPATH, '//div[1]/div[3]/div/div[2]/div/form/div[2]/div[1]/div[2]/div/div/div/div/input').send_keys(Keys.ENTER)
                 driver.implicitly_wait(0.1)
                 driver.find_element(By.XPATH, '//div[1]/div[3]/div/div[2]/div/form/div[2]/div[1]/div[2]/div/div/div/div/input').send_keys(Keys.ESCAPE)
-
 
             time.sleep(1)
 
@@ -116,10 +121,14 @@ while i <= len(sheetRange['A']):
                     break
 
             for tdline in testDatas:
-                driver.find_element(By.CSS_SELECTOR, ".css-3ype3w").click()  
+                driver.implicitly_wait(0.5)
+                driver.find_element(By.CSS_SELECTOR, ".css-3ype3w").click()
+                driver.implicitly_wait(0.5)  
                 driver.find_element(By.XPATH, "//section/div/div/div/div/input").send_keys(tdline)
                 time.sleep(0.5)
+                driver.implicitly_wait(0.5)
                 driver.find_element(By.XPATH, "//button/div/div/label/span").click()
+                driver.implicitly_wait(0.5)
                 driver.find_element(By.XPATH, "//footer/button[2]").click()
 
                 if not testDatas:
