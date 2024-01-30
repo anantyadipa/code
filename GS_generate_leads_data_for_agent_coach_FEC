@@ -1,0 +1,70 @@
+function generateRandomData() {
+  var sheetName = 'For Self Upload';
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
+  
+  if (!sheet) {
+    Logger.log('Sheet not found: ' + sheetName);
+    return;
+  }
+
+  // Menghasilkan nomor ponsel untuk cell D2:D10 dan G2:G10
+  generatePhoneNumbers(sheet.getRange('D2:D25'));
+  generatePhoneNumbers(sheet.getRange('G2:G25'));
+
+  // Menghasilkan nama manusia dan email untuk cell B2:B10 dan C2:C10
+  generateHumanNamesAndEmails(sheet.getRange('B2:B25'), sheet.getRange('C2:C25'));
+}
+
+function generatePhoneNumbers(range) {
+  var numRows = range.getNumRows();
+  var randomNumbers = [];
+
+  for (var i = 0; i < numRows; i++) {
+    var randomNumber = "62856" + getRandomDigits(7); // Menambahkan awalan 0856 dan 7 digit random
+    randomNumbers.push([randomNumber]);
+  }
+
+  // Menetapkan nilai ke sel
+  range.setValues(randomNumbers);
+}
+
+
+
+function generateRandomHumanName() {
+  var firstNameList = ['Ant', 'Bat', 'Cat', 'Dog', 'Elephant', 'Fox', 'Giraffe', 'Horse', 'Iguana', 'Jaguar','Kangaroo', 'Lion', 'Monkey', 'Newt', 'Ostrich', 'Penguin', 'Quokka', 'Raccoon', 'Snake', 'Tiger','Umbrellabird', 'Vulture', 'Walrus', 'X-ray Tetra', 'Yak', 'Zebra', 'Armadillo', 'Buffalo', 'Cheetah', 'Dolphin','Eagle', 'Frog', 'Gorilla', 'Hummingbird', 'Impala', 'Jellyfish', 'Koala', 'Lynx', 'Mantis Shrimp', 'Narwhal','Ocelot', 'Peacock', 'Quail', 'Rattlesnake', 'Squirrel', 'Toucan', 'Uakari', 'Viper', 'Wallaby', 'Xenops','Yabby', 'Zorse', 'Albatross', 'Bison', 'Chinchilla', 'Duck', 'Echidna', 'Fennec Fox', 'Gibbon', 'Hawk','Ibex', 'Jackrabbit', 'Kiwi', 'Llama', 'Mole', 'Nudibranch', 'Owl', 'Platypus', 'Quoll', 'Red Panda','Starfish', 'Tapir', 'Uguisu', 'Vervet Monkey', 'Wolf', 'Xenopus', 'Yakutian Horse', 'Zonkey'];
+  var lastNameList = ['Run', 'Jump', 'Sing', 'Dance', 'Swim', 'Climb', 'Read', 'Write', 'Paint', 'Draw','Laugh', 'Cry', 'Sleep', 'Eat', 'Talk', 'Listen', 'Think', 'Create', 'Explore', 'Play',    'Build', 'Destroy', 'Discover', 'Teach', 'Learn', 'Fly', 'Solve', 'Cook', 'Help', 'Travel',   'Capture', 'Release', 'Plant', 'Harvest', 'Design', 'Imagine', 'Conquer', 'Escape', 'Celebrate', 'Meditate',    'Hide', 'Seek', 'Find', 'Lose', 'Watch', 'Forgive', 'Dream', 'Achieve', 'Believe', 'Contribute',    'Inspire', 'Challenge', 'Reflect', 'Balance', 'Illuminate', 'Navigate', 'Question', 'Adapt', 'Transform', 'Persevere',    'Collaborate', 'Innovate', 'Breathe', 'Calm', 'Fulfill', 'Embrace', 'Appreciate', 'Rejoice', 'Connect', 'Celebrate',    'Consume', 'Produce', 'Fix', 'Break', 'Convince', 'Entertain', 'Serve', 'Protect', 'Experiment', 'Witness',   'Experiment', 'Reflect', 'Appreciate', 'Admire', 'Challenge', 'Celebrate', 'Encourage', 'Endure', 'Experience', 'Forgive',   'Invent', 'Juggle', 'Kick', 'Love', 'Motivate', 'Navigate', 'Overcome', 'Ponder', 'Quicken', 'Rise',    'Shine', 'Transform', 'Understand', 'Value', 'Wait', 'Xerox', 'Yearn', 'Zip'];
+  var randomFirstName = firstNameList[Math.floor(Math.random() * firstNameList.length)];
+  var randomLastName = lastNameList[Math.floor(Math.random() * lastNameList.length)];
+
+  return randomFirstName + ' ' + randomLastName;
+}
+
+function generateHumanNamesAndEmails(nameRange, emailRange) {
+  var numRows = nameRange.getNumRows();
+  var randomData = [];
+
+  for (var i = 0; i < numRows; i++) {
+    var randomName = generateRandomHumanName();
+    var randomEmail = randomName.toLowerCase().replace(/\s+/g, '') + getRandomDigits(3) + '@ruangguru.id';
+
+    randomData.push([randomName, randomEmail]);
+  }
+
+  // Menetapkan nilai ke sel
+  nameRange.setValues(randomData.map(row => [row[0]]));
+  emailRange.setValues(randomData.map(row => [row[1]]));
+}
+
+function getRandomDigits(length) {
+  var result = '';
+  var characters = '0123456789';
+
+  for (var i = 0; i < length; i++) {
+    var randomIndex = Math.floor(Math.random() * characters.length);
+    result += characters.charAt(randomIndex);
+  }
+
+  return result;
+}
+
+
